@@ -6,6 +6,7 @@ Originally created for Green Party of England and Wales internal elections - if 
 
 ## Installation/Example:
 devtools::install_github("jackgovier/BLT")
+
 library(blt)
 
 df <- read_blt("./deputy-leader.blt")
