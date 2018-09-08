@@ -1,7 +1,6 @@
 #' read_blt Function
 #'
 #' Function to parse and process OpenSTV / OpaVote .blt files into a format with 1 ballot per line and the candidates encoded as factors.
-#' @param df Desired dataframe name
 #' @param filepath Filepath of blt file, including filename.blt
 #' @param weight Optional parameter to return ballot weight. Default = F
 #' @export

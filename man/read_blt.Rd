@@ -4,11 +4,9 @@
 \alias{read_blt}
 \title{read_blt Function}
 \usage{
-read_blt(df, filepath, weight = F)
+read_blt(filepath, weight = F)
 }
 \arguments{
-\item{df}{Desired dataframe name}
-
 \item{filepath}{Filepath of blt file, including filename.blt}
 
 \item{weight}{Optional parameter to return ballot weight. Default = F}
@@ -17,5 +15,5 @@ read_blt(df, filepath, weight = F)
 Function to parse and process OpenSTV / OpaVote .blt files into a format with 1 ballot per line and the candidates encoded as factors.
 }
 \examples{
-read_blt(df, "C:/Users/User1/Documents/leader.blt")
+read_blt("C:/Users/User1/Documents/leader.blt")
 }
