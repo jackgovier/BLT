@@ -30,11 +30,7 @@ read_blt <- function(df, filepath, weight = F) {
   #Create column names for preferences numbers
   coln <- paste0("pref",0:nrow(names))
   coln[1] <- "weight"
-<<<<<<< HEAD
   df1 <- suppressWarnings(tidyr::separate(data = c, col = a, into = coln , sep = " "))
-=======
-  df1 <- suppressWarnings(separate(data = c, col = a, into = coln , sep = " "))
->>>>>>> 175be73a9ffb30a10f6b6248c2076749738f7687
 
   #Create factor with correct levels and labels
   df2 <- df1
