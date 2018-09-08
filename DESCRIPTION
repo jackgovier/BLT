@@ -10,5 +10,9 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.0
 Imports: stringr,
+<<<<<<< HEAD
     readr,
     tidyr
+=======
+    readr
+>>>>>>> 175be73a9ffb30a10f6b6248c2076749738f7687
