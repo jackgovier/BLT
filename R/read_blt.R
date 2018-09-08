@@ -8,13 +8,12 @@
 #' @examples
 #' read_blt(df, "C:/Users/User1/Documents/leader.blt")
 
-
 read_blt <- function(df, filepath, weight = F) {
   #Import file as TSV
   b <- suppressMessages(suppressWarnings(readr::read_tsv(paste0(filepath))))
   colnames(b) <- "a"
   #Only keep lines beginning with 1 and ending with 0
-  c <- filter(b, stringr::str_detect(b$a,"^1.*[0$]"))
+  c <- dplyr::filter(b, stringr::str_detect(b$a,"^1.*[0$]"))
 
   #Isolate candidate names from line 2 after last ballot line
   names <- data.frame(stringr::str_split(b[max(which(stringr::str_detect(b$a,"^1.*[0$]")))+2,], "\""))
