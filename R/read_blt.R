@@ -6,9 +6,9 @@
 #' @param weight Optional parameter to return ballot weight. Default = F
 #' @export
 #' @examples
-#' read_blt(df, "C:/Users/User1/Documents/leader.blt")
+#' read_blt("C:/Users/User1/Documents/leader.blt")
 
-read_blt <- function(df, filepath, weight = F) {
+read_blt <- function(filepath, weight = F) {
   #Import file as TSV
   b <- suppressMessages(suppressWarnings(readr::read_tsv(paste0(filepath))))
   colnames(b) <- "a"
@@ -45,8 +45,7 @@ read_blt <- function(df, filepath, weight = F) {
     df3 <- df2[2:ncol(df2)]
   }
 
-  #Assign to chosen dataframe name
-  assign(quo_name(enquo(df)),df3, .GlobalEnv)
+  return(df3)
 
 }
 
